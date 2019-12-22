@@ -10,7 +10,7 @@ def main():
     print("-------------------PSO---------------\n")
     print("-------------------------------------\n")
 
-    args = {'options' : {'c1': 0.3, 'c2' : 0.3, 'w' : 0.9}, 'particles': 100, 'dimensions' : 10, 'iters' : 50}
+    args = {'options' : {'c1': 0.3, 'c2' : 0.3, 'w' : 0.9}, 'particles': 200, 'dimensions' : 60, 'iters' : 200}
 
     cost, pos = PsoOptimization.rosenbrockFunction(**args)
     print(cost, pos)
@@ -22,7 +22,7 @@ def main():
     print("-------------------ACO---------------\n")
     print("-------------------------------------\n")
 
-    args = {'dim' : 10, 'tamPopulation' : 100, 'iters' : 50, 'kernel' : 100} #KERNEL EQUAL OR LOWER THAN POPULATION LENGTH
+    args = {'dim' : 60, 'tamPopulation' : 200, 'iters' : 200, 'kernel' : 200} #KERNEL EQUAL OR LOWER THAN POPULATION LENGTH
 
     logIterations = ACO_Optimization.applyACO(**args)
     print(logIterations)
